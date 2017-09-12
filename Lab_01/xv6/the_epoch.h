@@ -1,0 +1,49 @@
+#ifndef _THE_EPOCH_H
+#define _THE_EPOCH_H
+
+// DEFINO LAS DIRRECCIONES DE MEMORIA 
+#define RTC_ADDR 0x70
+#define RTC_DATA 0x71
+#define RTC_SEG 0x00
+#define RTC_MIN 0x02
+#define RTC_HOUR 0x04
+#define RTC_DAY 0x07
+#define RTC_MONTH 0x08
+#define RTC_YEAR 0x09
+#define UIP_ADDR 0x0A
+
+
+uint bcd_to_binary(uint num_bcd);
+/*
+* DESARMA UN NUMERO EN BCD Y LO REARMA COMO BINARIO
+*/
+
+
+uint mktime(const uint year, const uint month,
+                   const uint day, const uint hour,
+                   const uint min, const uint sec);
+/*
+* DADOS LOS SEGUNDOS, MINUTOS, HORA, DIA, MESES, AÑO
+* DEVUELVE LA CANTIDAD DE SEGUNDOS QUE PASARON DESDE
+* THE EPOCH (1 DE ENERO DE 1970 A LAS 0:00 HS)
+* HASTA LA FECHA DADA COMO PARAMETRO
+*/
+
+
+uint UIP_status(void);
+/*
+* LEE EL REGISTRO A PARA PODER DETECTAR SI EL UIP
+* (UPDATE IN PROGRESS) SE ESTA ACTUALIZANDO, MIENTRAS
+* SEA 1 SE ESTA ACTUALIANDO, MIESTRAS SEA 0 NO SE ESTA
+* ACTUALIZANDO (244 MICROSEGUNDOS) 
+*/
+
+
+uint rtc_data(const ushort port);
+/*
+* FUNCION AUXILIAR LA CUAL SIRVE PARA LEER EL REGISTRO
+* DEL RTC, DADO COMO PARAMETRO LA DIRRECION LA CUAL
+* SE DESEA LEER
+*/
+
+#endif

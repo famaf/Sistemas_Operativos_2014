@@ -1,0 +1,82 @@
+Informe
+-- ¿Usa formato markdown correctamente?	Mas o menos, está muy bonito, pero algunas porciones de texto se ven como código porque utilizan un tab antes. Los subtítulos están muy pequeños a comparación del texto.
+-- ¿Explica posibles errores que cometieron?	No.
+-- ¿Explica las tareas realizadas?	Sí.
+-- ¿Explica algún proceso de testing?	No.
+-- ¿Explica razones por las cuales hicieron lo que hicieron y funciona?	En general sí.
+-- ¿Detalla las fuentes de las cuales se extrajo información?	Sí.
+-- ¿Tiene errores de ortografía?	Sí. Ningún acento en todo el informe.
+-- ¿Está bien redactado?	Sí. En general no es necesario incluir el código o especificar cómo hacen las cosas, sino simplemente qué hacen.
+
+NOTA: "defs.h la seteamos como extern para que pueda ser llama en cualquier archivo donde se incluya la libreria defs.h"
+Eso no es lo que hace la palabra clave extern.
+
+Git
+-- ¿Los commits son de pocas líneas de código o funciones?	Sí.
+-- ¿Los commits tienen mensajes significativos?	Sí.
+-- ¿Entregaron código objeto?	No. Pero subieron los archivos .gitignore.
+-- ¿Los fuentes son ejecutables?	Sí.
+
+Trabajo en equipo
+-- ¿Entregaron a tiempo?	Sí.
+-- ¿Todos los miembros del equipo trabajaron?	Sí.
+-- ¿Los commits reflejan organización?	Sí.
+-- ¿Se mostraron activos durante las clases?	Sí.
+
+Código
+-- ¿Mantiene un estilo de código riguroso?	Utilizan tabs en lugar de espacios algunas veces. Tiene código muerto. Comentario de funciones tiene otro estilo.
+-- ¿Está modularizado en funciones y/o archivos?	Sí, ambos.
+-- ¿Usa nombres de variables y funciones representativos?	Sí.
+-- ¿Tiene comentarios?	Sí, pero están es castellano.
+-- ¿Declaran funciones auxiliares como static?	No.
+-- ¿Declaran variables que no se modifican como const?	No siempre.
+-- ¿Es conciso y legible?	Sí.
+
+Funcionalidad
+-- ¿Cumplieron con las funcionalidades básicas requeridas?
+	-- Leer el contenido del RTC.	Sí.
+	-- Transformar de formato BCD a binario.	Sí.
+	-- Calcular los segundos desde epoch.	Sí.
+	-- Respetar el UIP.	Sí.
+	-- Implementar la llamada a sistema.	Sí.
+	-- Implementar el comando de usuario.	Sí.
+-- ¿Funciona correctamente al momento de booteo?	Sí.
+-- ¿El valor de date es correcto?	En mi computadora se desincroniza, puede ser el problema 70/100
+-- ¿Cumplieron con los puntos estrellas?
+	-- Imprimir por la consola "UIP" cada vez que se detecte que el bit está en 1.	Lo listaron el el informe, lo hicieron, y se borró en uno de los commits.
+	-- Modificar la signatura de gettimeofday para que soporte la estructura.	No.
+	-- Mostrar la fecha en formato amigable.	No.
+	-- Hacer una implementación modular en archivos time.c y time.	Sí.
+-- ¿Respetaron las especificaciones especiales del laboratorio?
+	-- Signatura de funciones:
+		-- main.c:int rtcinit(void)	No, cambiaron el nombre.
+		-- main.c:int rtcread(void)	No, cambiaron el nombre.
+	-- Variable boottime para método relativo y timeofday para método absoluto.	Sí.
+	-- Colocar el código dentro de un directorio xv6 y el informe fuera.	Sí.
+
+
+Notas
+
+Cosas para seguir haciendo:
+-- Un informe bonito.
+-- Agregar comentarios a las funciones para que se entienda qué hacen.
+-- Trabajar en equipo.
+-- Commits pequeños.
+
+Cosas para dejar de hacer:
+-- Mezclar tabs y espacios.
+
+Cosas para empezar a hacer:
+-- Reportar las cosas que intentaron y no funcionaron.
+-- Poner los comentarios en inglés.
+-- Algunas veces explicar una función es muy complicado. Una forma simple de hacerlo es detallar qué hace la función, no cómo lo hace (para ver el cómo, uno mira directamente el código). Muchas documentaciones de proyectos se forman en base a los comentarios que hacen los programadores en el mismo código, lo cual es obligatorio en muchas empresas. Para el próximo lab, pueden guiarse por alguna definición de estilo como esta http://www.cs.swarthmore.edu/~newhall/unixhelp/c_codestyle.html o esta http://google-styleguide.googlecode.com/svn/trunk/cppguide.html que explica qué datos incluir cuando uno quiere explicar lo que hace una función. Pongan estas cosas en el informe, NO en el código porque estarían alterando mucho el estilo del mismo.
+-- Cuando citen funciones en el informe, pongan o el nombre de la función solamente, o la signatura completa, pero no pongan nombre_funcion(). Es convención nada más.
+-- Usar el autocorrector. Esta vez se las perdono, la próxima les bajo un punto.
+-- Fijarse en Bitbucket cómo está quedando el informe.
+-- Si hacen implementaciones de medición como en el caso del UIP, incluyan los resultados que obtuvieron.
+-- Agreguen la información nueva que aprendieron y que no estaba en el informe. Por ejemplo, ¡xv6 implementa las llamadas a sistema utilizando un arreglo! Si pueden, también agreguen por qué.
+-- Dejar un pequeño comentario en el informe sobré qué les pareció el lab, si sienten que aprendieron o que fue una pérdida de tiempo, si fue muy difícil, si se quedaron sin tiempo, etc. No se preocupen, ¡nunca les afectaría la nota! Es para saber cómo se está dando la materia, así que sean sinceros.
+
+
+NOTA SUGERIDA: 9
+Hicieron dos puntos estrella, pero no el más difícil, por eso les pondría un 9. Trabajan muy bien en clase y están comprometidos con la materia. Se nota que también están aprendiendo mucho, así que sigan así.
